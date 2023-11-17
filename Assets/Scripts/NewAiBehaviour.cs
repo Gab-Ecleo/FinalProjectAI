@@ -42,10 +42,7 @@ public class NewAiBehaviour : MonoBehaviour
 
         ArrowBehaviour _archerDamage = new ArrowBehaviour();
 
-        if (tag == "Team2")
-            _projectileTag = "Team2_Projectile";
-        if (tag == "Team1")
-            _projectileTag = "Team1_Projectile";
+        
 
         Action<AI_Types> activateAiModel = (AI_Types aiType) =>
         {
@@ -60,14 +57,25 @@ public class NewAiBehaviour : MonoBehaviour
                 health = GameManager.Instance.archerHealth;
                 range = GameManager.Instance.archerRange;
                 damage = GameManager.Instance.archerDamage;
+                if (tag == "Team2")
+                    _projectileTag = "Team2_Projectile";
+                if (tag == "Team1")
+                    _projectileTag = "Team1_Projectile";
                 break;
             case AI_Types.Warrior:
+                health = GameManager.Instance.warriorHealth;
+                range = GameManager.Instance.warriorRange;
+                damage = GameManager.Instance.warriorDamage;
                 break;
             case AI_Types.Mage:
+                health = GameManager.Instance.mageHealth;
+                range = GameManager.Instance.mageHealth;
+                damage = GameManager.Instance.mageDamage;
                 break;
             case AI_Types.Ninja:
                 health = GameManager.Instance.ninjaHealth;
                 range = GameManager.Instance.ninjaRange;
+                damage = GameManager.Instance.ninjaDamage;
                 break;
             default:
                 break;
