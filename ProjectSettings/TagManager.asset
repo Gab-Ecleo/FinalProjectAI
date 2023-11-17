@@ -9,6 +9,7 @@ TagManager:
   - Team2
   - Team1_Projectile
   - Team2_Projectile
+  - Blade
   layers:
   - Default
   - TransparentFX
