@@ -40,6 +40,10 @@ public class NewAiBehaviour : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
 
+        ArrowDamage _archerDamage = new ArrowDamage();
+
+        _archerDamage.damage = damage;
+
         if (tag == "Team2")
             _projectileTag = "Team2_Projectile";
         if (tag == "Team1")
@@ -57,6 +61,7 @@ public class NewAiBehaviour : MonoBehaviour
             case AI_Types.Archer:
                 health = GameManager.Instance.archerHealth;
                 range = GameManager.Instance.archerRange;
+                damage = GameManager.Instance.archerDamage;
                 break;
             case AI_Types.Warrior:
                 break;

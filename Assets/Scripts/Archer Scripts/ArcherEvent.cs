@@ -22,6 +22,7 @@ public class ArcherEvent : MonoBehaviour
 
         GameObject arrowFX = Instantiate(newAiBehaviour.Arrow, newAiBehaviour.spawnArcherFX.position, newAiBehaviour.spawnArcherFX.rotation);
         Rigidbody bulletRigidbody = arrowFX.AddComponent<Rigidbody>();
+        bulletRigidbody.AddForce(transform.forward * speed, ForceMode.Impulse);
 
         if (newAiBehaviour.gameObject.tag == "Team2")
             arrowFX.tag = "Team2_Projectile";
@@ -29,6 +30,6 @@ public class ArcherEvent : MonoBehaviour
             arrowFX.tag = "Team1_Projectile";
         
         
-        bulletRigidbody.AddForce(transform.forward * speed, ForceMode.Impulse);
+        
     }
 }
