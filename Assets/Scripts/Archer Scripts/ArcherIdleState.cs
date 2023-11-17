@@ -7,12 +7,12 @@ public class ArcherIdleState : StateMachineBehaviour
     NewAiBehaviour aiBehaviour;
     
     // OnStateEnter is called when a transition starts and the state machine starts to evaluate this state
-    override public async void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
+    override public void OnStateEnter(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
         aiBehaviour = animator.GetComponentInParent<NewAiBehaviour>();
         
         #region will walk after 5 seconds
-        await Task.Delay(5000);
+        //await Task.Delay(5000);
         animator.SetBool("isWalking", true);
         #endregion
     }
