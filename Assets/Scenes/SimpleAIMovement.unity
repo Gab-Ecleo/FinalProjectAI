@@ -1296,11 +1296,11 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   archerHealth: 12
-  archerDamage: 2
-  archerRange: 20
-  warriorHealth: 12
-  warriorDamage: 4
-  warriorRange: 4
+  archerDamage: 4
+  archerRange: 12
+  warriorHealth: 30
+  warriorDamage: 5
+  warriorRange: 2
   mageHealth: 12
   mageDamage: 12
   mageRange: 3
