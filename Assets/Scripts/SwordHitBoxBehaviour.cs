@@ -17,15 +17,12 @@ public class SwordHitBoxBehaviour : MonoBehaviour
    {
       if (!_isRunning)
          StartCoroutine(AtkCd());
-      Debug.Log("Disabling Collider");
    }
 
    IEnumerator AtkCd()
    {
       _isRunning = true;
       _collider.enabled = false;
-      
-      Debug.Log("Counting Down");
 
       yield return new WaitForSeconds(2);
 
