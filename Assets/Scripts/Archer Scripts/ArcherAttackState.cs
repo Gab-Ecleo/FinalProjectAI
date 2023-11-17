@@ -28,6 +28,12 @@ public class ArcherAttackState : StateMachineBehaviour
             }
         }
         
+        if (!nearestGameObject)
+        {
+            animator.SetBool("isIdle", true);
+            animator.SetBool("isAttacking", false);
+        }
+        
         
         // animator.SetBool("isWalking", false);
         

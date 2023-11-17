@@ -86,9 +86,10 @@ public class NewAiBehaviour : MonoBehaviour
     private void Update()
     {
         if (health <= 0)
+        {
+            animator.SetBool("isDead", true);
             gameObject.SetActive(false);
-
-        Debug.Log(_projectileTag);
+        }
     }
 
     // Update is called once per frame

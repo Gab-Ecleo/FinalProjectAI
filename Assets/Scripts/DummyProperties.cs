@@ -44,12 +44,16 @@ public class DummyProperties : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        
-
         if (collision.gameObject.CompareTag("Team1_Projectile"))
         {
             Debug.Log("Dummy Damaged");
             _remainingHealth -= GameManager.Instance.archerDamage;
+        }
+        
+        else if (collision.gameObject.CompareTag("Blade"))
+        {
+            Debug.Log("Dummy Damaged");
+            _remainingHealth -= GameManager.Instance.warriorDamage;
         }
             
     }
