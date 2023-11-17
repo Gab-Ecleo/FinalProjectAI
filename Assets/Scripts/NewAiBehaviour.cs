@@ -129,5 +129,11 @@ public class NewAiBehaviour : MonoBehaviour
             health -= GameManager.Instance.archerDamage;
             Debug.Log("Enemy Damaged");
         }
+        
+        else if (collision.gameObject.CompareTag("Blade"))
+        {
+            health -= GameManager.Instance.warriorDamage;
+            Debug.Log("Enemy Damaged");
+        }
     }
 }
