@@ -1300,7 +1300,7 @@ MonoBehaviour:
   archerRange: 10
   warriorHealth: 12
   warriorDamage: 12
-  warriorRange: 0
+  warriorRange: 3
   mageHealth: 12
   mageDamage: 12
   mageRange: 3
