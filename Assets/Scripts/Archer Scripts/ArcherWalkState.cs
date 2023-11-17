@@ -33,6 +33,9 @@ public class ArcherWalkState : StateMachineBehaviour
     // OnStateExit is called when a transition ends and the state machine finishes evaluating this state
     override public void OnStateExit(Animator animator, AnimatorStateInfo stateInfo, int layerIndex)
     {
+        GameObject nearestGameObject = GameObject.FindWithTag(aiBehaviour.tag);
+        if (!nearestGameObject) 
+            Debug.Log("No Enemies in range");
 
     }
 

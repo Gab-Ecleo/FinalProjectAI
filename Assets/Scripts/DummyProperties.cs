@@ -3,6 +3,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.Collections;
 using UnityEngine;
+using UnityEngine.AI;
 
 public class DummyProperties : MonoBehaviour
 {
@@ -43,10 +44,14 @@ public class DummyProperties : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        ArrowDamage _archerDamage = new ArrowDamage();
+        
 
         if (collision.gameObject.CompareTag("Team1_Projectile"))
-            _remainingHealth -= _archerDamage.damage;
+        {
+            Debug.Log("Dummy Damaged");
+            _remainingHealth -= GameManager.Instance.archerDamage;
+        }
+            
     }
 
     #endregion

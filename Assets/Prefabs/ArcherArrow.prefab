@@ -4854,9 +4854,8 @@ GameObject:
   - component: {fileID: 4430283953656380}
   - component: {fileID: 198161343025679248}
   - component: {fileID: 199255407689944526}
-  - component: {fileID: 54374910547708342}
   - component: {fileID: 135783597193828132}
-  - component: {fileID: -5673567940906495697}
+  - component: {fileID: -1551091656119976147}
   m_Layer: 0
   m_Name: ArcherArrow
   m_TagString: Untagged
@@ -9748,33 +9747,6 @@ ParticleSystemRenderer:
   m_MeshWeighting2: 1
   m_MeshWeighting3: 1
   m_MaskInteraction: 0
---- !u!54 &54374910547708342
-Rigidbody:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1261555563981962}
-  serializedVersion: 4
-  m_Mass: 1
-  m_Drag: 0
-  m_AngularDrag: 0
-  m_CenterOfMass: {x: 0, y: 0, z: 0}
-  m_InertiaTensor: {x: 1, y: 1, z: 1}
-  m_InertiaRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_IncludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ExcludeLayers:
-    serializedVersion: 2
-    m_Bits: 0
-  m_ImplicitCom: 1
-  m_ImplicitTensor: 1
-  m_UseGravity: 0
-  m_IsKinematic: 1
-  m_Interpolate: 1
-  m_Constraints: 0
-  m_CollisionDetection: 0
 --- !u!135 &135783597193828132
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -9796,7 +9768,7 @@ SphereCollider:
   serializedVersion: 3
   m_Radius: 0.061769478
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &-5673567940906495697
+--- !u!114 &-1551091656119976147
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}

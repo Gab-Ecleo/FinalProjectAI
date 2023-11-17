@@ -40,9 +40,7 @@ public class NewAiBehaviour : MonoBehaviour
     {
         agent = GetComponent<NavMeshAgent>();
 
-        ArrowDamage _archerDamage = new ArrowDamage();
-
-        _archerDamage.damage = damage;
+        ArrowBehaviour _archerDamage = new ArrowBehaviour();
 
         if (tag == "Team2")
             _projectileTag = "Team2_Projectile";
@@ -117,9 +115,9 @@ public class NewAiBehaviour : MonoBehaviour
     {
         NewAiBehaviour _enemyAI = collision.gameObject.GetComponent<NewAiBehaviour>();
 
-        if (collision.gameObject.CompareTag("Team1_Projectile"))
+        if (collision.gameObject.CompareTag("Team1_Projectile" ) || collision.gameObject.CompareTag("Team2_Projectile" ))
         {
-            health -= _enemyAI.damage;
+            health -= GameManager.Instance.archerDamage;
             Debug.Log("Enemy Damaged");
         }
     }
